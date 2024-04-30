@@ -49,8 +49,8 @@ header {
 
 /* Dropdown added */
 .dropbtn {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--tertiary-color);
     padding: 16px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -63,6 +63,7 @@ header {
   .dropdown {
     position: relative;
     display: inline-block;
+    border-radius: 8px;
   }
   
   .dropdown-content {
@@ -70,6 +71,7 @@ header {
     position: absolute;
     background-color: var(--tertiary-color);
     min-width: 160px;
+    border-radius: 8px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     color: #f1f1f1;
@@ -82,14 +84,17 @@ header {
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
   
   .dropdown:hover .dropdown-content {
     display: block;
+    border-radius: 8px;
   }
   
   .dropdown:hover .dropbtn {
-    background-color: var(--font-color);
+    background-color: var(--secondary-color);
   }  
 
 /* Hero Section */  
@@ -106,10 +111,16 @@ header {
 .hero-content {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
+    text-align: center;
 }
 
 h1 {
     font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+
 }
 
 p {
@@ -118,7 +129,7 @@ p {
 
 .btn-reserve {
     display: inline-block;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 10px 20px;
     text-decoration: none;
@@ -137,7 +148,7 @@ p {
 
 .menu  {
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: var(--tertiary-color);
     color: var(--tertiary-color); 
     align-content: center;
     opacity: 0.9;
@@ -147,11 +158,12 @@ p {
     color: var(--text-color);
     padding: 10px;
     margin: 10px;
+    text-align: center;
 }
 
 .group {
     display: flex;
-    background-color: var(--bg-color);
+    background-color: var(--tertiary-color);
     width: 100%;
     align-content: center;
     justify-content: space-around;
@@ -196,7 +208,7 @@ p {
 }
 
 .left a:hover .left-sub {
-    background-color: lemonchiffon;
+    background-color: var(--text-color);
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
@@ -240,7 +252,7 @@ h2 {
 }
 
 .middle:hover {
-    background-color: lemonchiffon;
+    background-color: var(--text-color);
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
@@ -277,7 +289,7 @@ h2 {
 }
 
 .right-sub:hover {
-    background-color: lemonchiffon;
+    background-color: var(--text-color);
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
@@ -308,7 +320,7 @@ h2 {
 
 .about h2, h3, p {
     color: var(--text-color);
-    text-align: justify;
+    text-align: center;
     justify-content: center;
     padding: 10px 10px 25px; 
 }
@@ -363,18 +375,23 @@ h2 {
 .location {
     padding: 150px 0;
     justify-content: center;
+    background-color: var(--tertiary-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
 }
 
-.location h2, h3{
+.location h2, h3 {
     text-align: center;
-    color: var(--bg-color);    
+    color: var(--text-color);
     padding: 10px 10px 25px;
-    
 }
   
+.location-op h2, h3{
+    justify-content: center;
+    color: var(--text-color);
+}
+
 .container-search {
     display: flex;
     justify-content: center;
@@ -402,7 +419,7 @@ h2 {
 }
 
 #searchBar:focus {
-border:2px solid rgb(79, 137, 224)
+border:2px solid var(--text-color);
 }
 
 #searchBarSubmit {
@@ -410,7 +427,7 @@ border:2px solid rgb(79, 137, 224)
   top:0;
   height: 38px;
   width: 40px;
-  background-color: rgb(243, 5, 5);
+  background-color: blueviolet;
   border: 1px transparent;
   border-radius: 40px;
   padding: 7px;
@@ -429,10 +446,15 @@ border:2px solid rgb(79, 137, 224)
   color: var(--text-color);
 }
 
-#searchBarSubmit i{
+#searchBarSubmit i {
   position: relative;
   right: 0;
-  color: white;
+  color: var(--text-color);
+}
+
+#searchBarSubmit:hover {
+  background-color: lightskyblue;
+  transition: 1s;
 }
 
 .btn{
