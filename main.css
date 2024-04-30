@@ -9,7 +9,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +42,7 @@ header {
     background-color: #d43f3a;
     color: white;
     padding: 16px;
+    margin-bottom: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -463,11 +464,14 @@ h2 {
     margin: 0;
 }
 
-.contact-info, .social-media {
-    text-align: center;
+.contact-info, 
+.social-media {
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.contact-info h2, .social-media h2 {
+.contact-info h2, 
+.social-media h2 {
     font-size: 20px;
 }
 
@@ -592,4 +596,43 @@ h2 {
     color: #141414;
     background: var(--text-color);
     border: 2px solid var(--text-color);
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 901px) {
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar ul li {
+        margin-right: 25px;
+    }
+}
+
+/* Media query for medium-sized screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar ul li {
+        margin-right: 15px;
+    }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 5px 0;
+    }
 }
