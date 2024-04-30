@@ -1,14 +1,25 @@
-body {
+* {
     margin: 0;
     padding: 0;
     font-family: "Roboto Slab", sans-serif;
 }
 
-/* Header Section */
+:root {
+    --bg-color: #333;
+    --text-color: #d2c6c6;
+    --secondary-color: #ae8957;
+    --tertiary-color: #000;
+    --font-color: #695f35;
+    --subop-color: #fffacd;
 
+    --big-font: 6.6rem;
+    --p-font: 1rem;
+}
+
+/* Header Section */
 header {
     background-color: #333;
-    color: #fff;
+    color: var(--text-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -33,14 +44,13 @@ header {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
 }
 
 /* Dropdown added */
-
 .dropbtn {
-    background-color: #d43f3a;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 16px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -58,7 +68,7 @@ header {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: var(--tertiary-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -66,7 +76,7 @@ header {
   }
   
   .dropdown-content a {
-    color: black;
+    color: var(--tertiary-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -79,7 +89,7 @@ header {
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #d43f3a;
+    background-color: var(--font-color);
   }  
 
 /* Hero Section */  
@@ -88,7 +98,7 @@ header {
     background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D'); /* Add your restaurant image */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     padding: 150px 0;
 }
@@ -108,8 +118,8 @@ p {
 
 .btn-reserve {
     display: inline-block;
-    background-color: #d43f3a;
-    color: #fff;
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -117,27 +127,31 @@ p {
 }
 
 /* Menu Section */
-
-.menu, .about, .reservation, .contact {
+.menu, 
+.about, 
+.reservation, 
+.contact {
     padding: 40px 0;
     text-align: center;
 }
 
 .menu  {
     text-align: center;
-    background-color: #333;
-    color: #fff; 
+    background-color: var(--bg-color);
+    color: var(--tertiary-color); 
     align-content: center;
     opacity: 0.9;
 }
 
-.menu h2 {
-    color: #fff;
+.menu h2, p {
+    color: var(--text-color);
+    padding: 10px;
+    margin: 10px;
 }
 
 .group {
     display: flex;
-    background-color: #333;
+    background-color: var(--bg-color);
     width: 100%;
     align-content: center;
     justify-content: space-around;
@@ -146,7 +160,7 @@ p {
 }
 
 .group h2 {
-    color: #fff;
+    color: var(--text-color);
 }
 
 /* LEFT SIDE */
@@ -157,27 +171,32 @@ p {
     overflow-y: scroll;
     text-align: center;
 }
+
 .left-sub {
     max-width: 350px;    
     border-radius: 10px;
     margin-bottom: 10px;
     padding-bottom: 15px;
 }
+
 .left-sub img{
     width: 100%;
     border-radius: 10px;
 }
+
 .left-sub h3 {
     font-size: 17px;
     padding: 7px;
 }
+
 .left a {
-    color: #fff;
+    color: var(--tertiary-color);
     text-decoration: none;
     cursor: pointer;
 }
+
 .left a:hover .left-sub {
-    background-color: lightsalmon;
+    background-color: lemonchiffon;
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
@@ -196,26 +215,32 @@ h2 {
     width: 60%;
     overflow-y: scroll;
 }
+
 .middle-sub h2, .middle p{
     padding-left: 10px;
 }
+
 .middle img {
     width: 100%;
     border-radius: 5px;
 }
+
 .middle h2 {
     font-size: 30px;
 }
+
 .middle p, .middle a {
     font-size: 16px;
     color: rgb(22, 22, 22);
     text-decoration: none;
 }
+
 .middle p {
     margin-top: 10px;
 }
+
 .middle:hover {
-    background-color: lightsalmon;
+    background-color: lemonchiffon;
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
@@ -226,37 +251,44 @@ h2 {
     border-radius: 10px;
     margin-bottom: 0px;
 }
+
 .smaller-img img{
     width: 350px;
     height: 100%;
     border-radius: 10px;
 }
+
 .right {
     height: 600px;    
     overflow-y: scroll;
     right: 15px;
 }
+
 .right h2 {
     font-size: 30px;
     font-weight: bold;
     margin: 38px 0 15px;
 }
+
 .right-link {
-    color: #fff;
+    color: var(--tertiary-color);
     text-decoration: none;
     cursor: pointer;
 }
- .right-sub:hover {
-    background-color: lightsalmon;
+
+.right-sub:hover {
+    background-color: lemonchiffon;
     box-shadow: 1px 1px 10px;
     transition-duration: 0.4s;
 }
+
 .right-writeup {
     font-size: 16px;
     padding: 10px 10px 25px;
 }
+
 .right-writeup h4{
-    color: #fff;
+    color: var(--tertiary-color);
     margin: 10px 0;
 }
 
@@ -271,14 +303,14 @@ h2 {
 }
 
 .about img {
-    width: 100%;
+    width: 100vh;
 }
 
 .about h2, h3, p {
-    color: #fff;
-    text-align: center;
+    color: var(--text-color);
+    text-align: justify;
     justify-content: center;
-    padding: 30px;           
+    padding: 10px 10px 25px; 
 }
 
 .about-turn {
@@ -328,7 +360,6 @@ h2 {
 }
 
 /* Location Section */
-
 .location {
     padding: 150px 0;
     justify-content: center;
@@ -339,8 +370,9 @@ h2 {
 
 .location h2, h3{
     text-align: center;
-    color: #333;
-    text-justify:auto;
+    color: var(--bg-color);    
+    padding: 10px 10px 25px;
+    
 }
   
 .container-search {
@@ -348,110 +380,104 @@ h2 {
     justify-content: center;
     width: 100%;
     height: 100px;
-  }
-  
-  .searchBarHolder {
-    position: relative;
-  }
-  
-  #searchBar {
-    margin-top: 20px;
-    background-color: rgb(10, 9, 9);
-    border-radius: 45px;
-    border: 1px solid rgb(11, 11, 11);
-    text-align: left;
-    height: 50px;
-    outline: none;
-    min-width: 400px;
-    padding-left: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-
-  }
-  #searchBar:focus {
-  border:2px solid rgb(79, 137, 224)
-  }
-
-  #searchBarSubmit {
-    position: absolute;
-    top:0;
-    height: 38px;
-    width: 40px;
-    background-color: rgb(243, 5, 5);
-    border: 1px transparent;
-    border-radius: 40px;
-    padding: 7px;
-    right: 0;
-    margin-right: 8px;
-    margin-top: 28px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    outline: none;
-
-  }
-
-  .lct-Icon {
-    position: relative;
-    padding-bottom:50px;
-    left:55%;
-	  transform: translate(-50%,-50%);
-    color: rgb(128, 123, 123);
-  }
-
-  #searchBarSubmit i{
-    position: relative;
-    right: 0;
-    color: white;
-
-  }
-  .btn{
-    margin:0;
-    background-color: red;
-    position: relative;
-    left: 43%;
-    color:black;
-    padding: 10px 12px;
-    border:none;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 200px;
-    height: 35px;
-    font-size: 12px;
-    font-weight: 900;
-  }
-  
-  .btn i{
-    font-weight:1000;
-    font-size: 15px;
-  }
-
-  .btn:hover{
-    background-color:#333;
-    transition: 1s;
-  }
-
-
-h2 {
-    font-size: 28px;
-    color: #333;
 }
 
+.searchBarHolder {
+  position: relative;
+}
+
+#searchBar {
+  margin-top: 20px;
+  background-color: rgb(10, 9, 9);
+  border-radius: 45px;
+  border: 1px solid rgb(11, 11, 11);
+  text-align: left;
+  height: 50px;
+  outline: none;
+  min-width: 400px;
+  padding-left: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+#searchBar:focus {
+border:2px solid rgb(79, 137, 224)
+}
+
+#searchBarSubmit {
+  position: absolute;
+  top:0;
+  height: 38px;
+  width: 40px;
+  background-color: rgb(243, 5, 5);
+  border: 1px transparent;
+  border-radius: 40px;
+  padding: 7px;
+  right: 0;
+  margin-right: 8px;
+  margin-top: 28px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.lct-Icon {
+  position: relative;
+  padding-bottom:50px;
+  left:55%;	  transform: translate(-50%,-50%);
+  color: var(--text-color);
+}
+
+#searchBarSubmit i{
+  position: relative;
+  right: 0;
+  color: white;
+}
+
+.btn{
+  margin:0;
+  background-color: var(--bg-color);
+  position: relative;
+  left: 43%;
+  color: var(--text-color);
+  padding: 10px 12px;
+  border:none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 200px;
+  height: 35px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.btn i {
+  font-weight:1000;
+  font-size: 15px;
+}
+
+.btn:hover {
+  background-color:var(--text-color);
+  transition: 1s;
+}
+
+
+/* Footer Section */
 .restaurant-footer {
-    background-color: #333;
+    background-color: var(--bg-color);
     color: #fff;
     padding: 40px 0;
 }
 
-/* Footer Section */
-
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around ;
     align-items: center;
 }
 
 .footer-logo {
     text-align: left;
+    color: var(--text-color);
 }
 
 .footer-logo h1 {
@@ -466,13 +492,15 @@ h2 {
 
 .contact-info, 
 .social-media {
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-info h2, 
 .social-media h2 {
     font-size: 20px;
+    color: var(--text-color);
+    padding-left: 100px;
 }
 
 .contact-info p {
@@ -534,6 +562,7 @@ h2 {
     text-align: center;
     font-size: 14px;
     margin-top: 10px;
+    color: var(--text-color);
 }
 
 .share{    
@@ -558,7 +587,7 @@ h2 {
     box-shadow: 0px 20px 40px #00000070;
     border: 1px solid #3b3b3b;
     border-radius: 50%;
-    color: var(--text-color);
+    color: var(--subop-color);
     font-size: 20px;
     margin: 0 7px;
     transition: all 0.6s ease-in-out;
@@ -582,7 +611,7 @@ h2 {
 .btn:hover{
     transform: translateY(5px);
     background: transparent;
-    color: var(--main-color);
+    color: var(--subop-color);
 }
 
 .two{
@@ -595,7 +624,7 @@ h2 {
 .two:hover{
     color: #141414;
     background: var(--text-color);
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--subop-color);
 }
 
 /* Media query for larger screens */
