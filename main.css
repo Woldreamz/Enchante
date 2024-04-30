@@ -74,13 +74,15 @@ header {
     border-radius: 8px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    color: #f1f1f1;
+    color: var(--text-color);
   }
   
   .dropdown-content a {
-    color: var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
     padding: 12px 16px;
     text-decoration: none;
+    border-radius: 8px;
     display: block;
   }
   
@@ -304,6 +306,7 @@ h2 {
     margin: 10px 0;
 }
 
+/*----- About Section ------*/
 .about {
     background-image: url('https://img.freepik.com/free-photo/twigs-leaves-near-lamp-cutlery_23-2147811213.jpg?w=900&t=st=1699007299~exp=1699007899~hmac=f00651e8129a36ebcf48307f5ee8ea92de31e4c29fc6ab1de07230ccf49afd5c');
     text-align: center;    
@@ -318,16 +321,21 @@ h2 {
     width: 100vh;
 }
 
-.about h2, h3, p {
+.about-turn h2, p {
     color: var(--text-color);
-    text-align: center;
-    justify-content: center;
-    padding: 10px 10px 25px; 
 }
 
 .about-turn {
-    padding: 10px;
-    margin: 100px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    position: relative;
 }
 
 .reservation {   
@@ -381,15 +389,29 @@ h2 {
     background-position: right;
 }
 
+.location h2 {
+    padding: 15px;
+    margin: 15px;
+}
+
 .location h2, h3 {
     text-align: center;
     color: var(--text-color);
-    padding: 10px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    position: relative;
 }
   
 .location-op h2, h3{
     justify-content: center;
     color: var(--text-color);
+    margin: 45px;
 }
 
 .container-search {
